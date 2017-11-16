@@ -1,9 +1,13 @@
 package newwest.stayactive.stayactive;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -26,16 +30,18 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> commCenterNames = new ArrayList<>();
     ArrayList<Double> commCenterX = new ArrayList<>();
     ArrayList<Double> commCenterY = new ArrayList<>();
+    JsonReader jsReader;
+    ListView mainListView;
 
     private class getNames extends AsyncTask<String, Void, Void> {
 
         @Override
         protected Void doInBackground(String... strings) {
+            mainListView = findViewById(R.id.mainListView);
             try {
-                ListView mainListView = findViewById(R.id.mainListView);
                 InputStream is = getResources().openRawResource(R.raw.community);
                 InputStreamReader responseBodyReader = new InputStreamReader(is, "UTF-8");
-                JsonReader jsReader = new JsonReader(responseBodyReader);
+                jsReader = new JsonReader(responseBodyReader);
                 jsReader.beginArray();
                 while (jsReader.hasNext()) {
                     jsReader.beginObject();
@@ -60,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 jsReader.endArray();
                 jsReader.close();
-                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getApplication(), R.layout.support_simple_spinner_dropdown_item, commCenterNames);
-                mainListView.setAdapter(arrayAdapter);
+
             } catch (IOException e) {
                 Toast.makeText(getApplicationContext(), "No File found", Toast.LENGTH_SHORT).show();
             }
@@ -83,9 +88,19 @@ public class MainActivity extends AppCompatActivity {
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(49.18588392554472, -122.9436168718548)));
                     googleMap.setMinZoomPreference(10.0f);
                     googleMap.setMaxZoomPreference(13.0f);
-//                    CameraUpdateFactory.zoomTo(20.0f);
 
                     Toast.makeText(MainActivity.this, "Map Ready", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getApplication(), R.layout.support_simple_spinner_dropdown_item, commCenterNames);
+            mainListView.setAdapter(arrayAdapter);
+            mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
+                    intent.putExtra("Name", adapterView.getItemAtPosition(i).toString());
+                    startActivity(intent);
                 }
             });
         }
