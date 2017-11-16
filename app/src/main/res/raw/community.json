@@ -1,0 +1,236 @@
+[
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Fraserside Community Services - Subsidy Programs",
+		"Description" : "Provides subsidies for the following programs for low income New Westminster residents: Parks, Culture and Recreation subsidies (for New Westminster Parks, Recreation and Culture programs), Kidsport BC grants (subsidized registration fees for sports programs for children) and Camping Bureau (subsidized registration fees for children's summer camps).",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Hours vary by program, please visit website for more details",
+		"Location" : "2/F - 519 Seventh Street",
+		"PC" : "V3L 3B7",
+		"Phone" : "(604)522-3722 ext 120",
+		"Email" : "info@fraserside.bc.ca",
+		"Website" : "http://www.fraserside.bc.ca/mental-health-and-counselling/community-desk/",
+		"X" : "-122.920455471798",
+		"Y" : "49.212217450947115",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.920455471798, 49.212217450947115 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "New Westminster Community Schools",
+		"Description" : "Community Schools are committed to bringing programs and services to district schools in seven core programming and service areas: physical activity, arts and exploration, literacy, leadership, social responsibility, resources for children, youth and families, community engagement and health and wellness.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "",
+		"Location" : "2/F - 1001 Columbia Street",
+		"PC" : "V3M 1C4",
+		"Phone" : "(604)517-6240",
+		"Email" : "District Community School Coordinators: Robin Stewart (rstewart@sd40.bc.ca), Andrea Owen (aowen@sd40.bc.ca)",
+		"Website" : "http://district.sd40.bc.ca/services/community-schools",
+		"X" : "-122.9163643334876",
+		"Y" : "49.20047229052344",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.9163643334876, 49.20047229052344 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Canada Games Pool",
+		"Description" : "Indoor swimming and fitness facilities, including aquatics and fitness programming. There are free swims during certain periods of the week/month, please contact New Westminster Parks, Culture and Recreation or view the Active Living Guide for details. ",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Facility is open on Monday-Thursday, 6:00 am - 9:55 pm, Friday, 6:00 am - 10:25 pm, Saturday, 8:00 am - 8:25 pm, Sunday, 8:00 am - 9:55 pm , hours for particular programs and services vary",
+		"Location" : "65 East Sixth Avenue",
+		"PC" : "V3L 4G6",
+		"Phone" : "(604)526-4281",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/canada_games_pool.php",
+		"X" : "-122.90723884417564",
+		"Y" : "49.22158156046215",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.90723884417564, 49.22158156046215 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Centennial Community Centre",
+		"Description" : "Offers various fitness, sports, culture, arts and other programming.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Monday-Friday, 9:00 am - 8:30 pm, Friday, 9:00 am - 8:00 pm, Saturday, 8:00 am - 1:00 pm, Sunday, 8:30 am - 12:00 pm",
+		"Location" : "65 East Sixth Avenue",
+		"PC" : "V3L 4G6",
+		"Phone" : "(604)777-5100",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/centennial_community_centre.php",
+		"X" : "-122.90723884417564",
+		"Y" : "49.22158156046215",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.90723884417564, 49.22158156046215 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Century House",
+		"Description" : "Offers various programs for persons 50+ years old.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Monday-Friday, 9:00 am - 9:00 pm, Saturday, 9:00 am - 4:00 pm, Sunday, 12:00 pm - 4:00 pm (reduced hours during July & August)",
+		"Location" : "620 Eighth Street",
+		"PC" : "V3M 3S2",
+		"Phone" : "(604)519-1066",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/century_house.php",
+		"X" : "-122.92602861447645",
+		"Y" : "49.21175624925655",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.92602861447645, 49.21175624925655 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Hume Park Outdoor Pool",
+		"Description" : "Outdoor swimming facilities, including aquatics programming. There are free swims during certain periods of the week, please contact New Westminster Parks, Culture and Recreation or view the Active Living Guide for details.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Variable (weather-dependent) but usually open from late June to Labour Day from 1:15 pm - 8:00 pm",
+		"Location" : "660 East Columbia Street",
+		"PC" : "",
+		"Phone" : "(604)526-4281",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/canada_games_pool/outdoor_pools.php",
+		"X" : "-122.89174558767459",
+		"Y" : "49.23318782041552",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.89174558767459, 49.23318782041552 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Moody Park Arena",
+		"Description" : "Indoor ice skating rink that offers various ice sports related programs.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Hours vary depending on season",
+		"Location" : "701 Eighth Avenue",
+		"PC" : "V3M 2R2",
+		"Phone" : "(604)525-5301",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/moody_park_arena.php",
+		"X" : "-122.9261783718952",
+		"Y" : "49.21556332422588",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.9261783718952, 49.21556332422588 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Moody Park Outdoor Pool",
+		"Description" : "Outdoor swimming facilities, including aquatics programming. There are free swims during certain periods of the week, please contact New Westminster Parks, Culture and Recreation or view the Active Living Guide for details .",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Variable (weather-dependent) but usually open from late June to Labour Day from 1:15 pm - 8:00 pm",
+		"Location" : "701 Tenth Street ",
+		"PC" : "",
+		"Phone" : "(604)526-4281",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/canada_games_pool/outdoor_pools.php",
+		"X" : "-122.92816347757771",
+		"Y" : "49.21131823811966",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.92816347757771, 49.21131823811966 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Museum and Archives (located at Anvil Centre)",
+		"Description" : "Offers various cultural programs and exhibits at museum and archives.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Monday-Wednesday, Friday-Sunday, 10:00 am - 5:00 pm, Thursday, 10:00 am - 8:00 pm",
+		"Location" : "777 Columbia Street",
+		"PC" : "V3M 1B6",
+		"Phone" : "(604)515-8330",
+		"Email" : "anvilcentre@newwestcity.ca",
+		"Website" : "http://www.newwestpcr.ca/culture/museum_and_archives.php",
+		"X" : "-122.91119907005971",
+		"Y" : "49.20179604621419",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.91119907005971, 49.20179604621419 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Queens Park Arena",
+		"Description" : "Indoor ice skating rink that offers various ice sports related programs (and other sports during summer months). Location is within Queens Park itself near 3rd Avenue entrance.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Hours vary depending on season",
+		"Location" : "600 First Street ",
+		"PC" : "",
+		"Phone" : "(604)777-5111",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/queens_park_arena.php",
+		"X" : "-122.9057725467226",
+		"Y" : "49.214826986315074",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.9057725467226, 49.214826986315074 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Queens Park Arenex",
+		"Description" : "Indoor facility that includes a gymnasium and has various sports programs. Location is within Queens Park itself near 3rd Avenue entrance.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Program hours vary, refer to Active Living Guide for more details",
+		"Location" : "600 First Street ",
+		"PC" : "",
+		"Phone" : "(604)777-5121",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/queens_park_arenex.php",
+		"X" : "-122.90345214924537",
+		"Y" : "49.21447285358266",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.90345214924537, 49.21447285358266 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Queensborough Community Centre",
+		"Description" : "Facility includes a fitness centre, gymnasium, a library, meeting rooms and more. Various programs offered.",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Monday-Friday, 7:00 am - 9:30 pm, Saturday, 8:30 am - 5:30 pm, Sunday, 8:30 am - 8:30 pm",
+		"Location" : "920 Ewen Avenue",
+		"PC" : "V3M 5C8",
+		"Phone" : "(604)527-7388",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/recreation_centres/queensborough_community_centre.php",
+		"X" : "-122.9436168718548",
+		"Y" : "49.18588392554472",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.9436168718548, 49.18588392554472 ]
+		}
+	},
+	{
+		"json_featuretype" : "PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING",
+		"Name" : "Youth Centre",
+		"Description" : "Indoor facility with a gymnasium, fitness centre and various activities for youth (13-18 years old).",
+		"Category" : "Parks, Recreation and Community School Programming",
+		"Hours" : "Monday-Thursday, 3:15 pm - 9:00 pm, Friday-Saturday, 3:15pm-11:00pm",
+		"Location" : "620 Eighth Street",
+		"PC" : "V3M 3S2",
+		"Phone" : "(604)515-3801",
+		"Email" : "",
+		"Website" : "http://www.newwestpcr.ca/recreation/youth_centre.php",
+		"X" : "-122.92602861447645",
+		"Y" : "49.21175624925655",
+		"json_geometry" : {
+			"type" : "Point",
+			"coordinates" : [ -122.92602861447645, 49.21175624925655 ]
+		}
+	}
+]
