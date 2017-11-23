@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="newwest.stayactive.stayactive.MainActivity">
 
-   <fragment
-       android:id="@+id/mapFragment"
-       android:name="com.google.android.gms.maps.SupportMapFragment"
-       android:layout_width="match_parent"
-       android:layout_height="250dp">
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
 
-   </fragment>
+    </fragment>
+
     <ListView
-        android:layout_below="@+id/mapFragment"
         android:id="@+id/mainListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mapFragment">
     </ListView>
 </RelativeLayout>

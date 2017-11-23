@@ -1,7 +1,9 @@
 package newwest.stayactive.stayactive;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
@@ -39,6 +41,7 @@ public class DetailActivity extends AppCompatActivity {
     String phone;
     String site;
     ProgressBar progressBar;
+    FloatingActionButton fab;
 
     private class getDetail extends AsyncTask<Void, Void, Void> {
 
@@ -109,7 +112,13 @@ public class DetailActivity extends AppCompatActivity {
             commCenterHours.setText(hours);
             commCenterPhone.setText(phone);
             commCenterWebsite.setText(site);
-
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone));
+                    startActivity(i);
+                }
+            });
             SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.detailMapFragment);
             mapFragment.getMapAsync(new OnMapReadyCallback() {
                 @Override
@@ -137,7 +146,9 @@ public class DetailActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         progressBar.setProgress(0);
 
+
         extra = getIntent();
+        fab = (FloatingActionButton) findViewById(R.id.callFab);
         commCenterName = findViewById(R.id.commCenterName);
         commCenterDesc = findViewById(R.id.descTV);
         commCenterPhone = findViewById(R.id.phoneTV);

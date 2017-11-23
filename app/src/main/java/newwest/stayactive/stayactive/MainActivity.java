@@ -2,6 +2,7 @@ package newwest.stayactive.stayactive;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(String... strings) {
             mainListView = findViewById(R.id.mainListView);
+//            mainListView.setBackgroundColor(getResources().getColor(R.color.listBlue));
+
             try {
                 InputStream is = getResources().openRawResource(R.raw.community);
                 InputStreamReader responseBodyReader = new InputStreamReader(is, "UTF-8");
@@ -85,15 +88,15 @@ public class MainActivity extends AppCompatActivity {
                                 .title(commCenterNames.get(i)));
                     }
 
-                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(49.18588392554472, -122.9436168718548)));
-                    googleMap.setMinZoomPreference(10.0f);
-                    googleMap.setMaxZoomPreference(13.0f);
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(49.21556332422588, -122.9436168718548)));
+                    googleMap.setMinZoomPreference(12.0f);
+//                    googleMap.setMaxZoomPreference(13.0f);
 
                     Toast.makeText(MainActivity.this, "Map Ready", Toast.LENGTH_SHORT).show();
                 }
             });
 
-            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getApplication(), R.layout.support_simple_spinner_dropdown_item, commCenterNames);
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getApplication(), R.layout.customrows, commCenterNames);
             mainListView.setAdapter(arrayAdapter);
             mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -103,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+            Snackbar.make(mainListView,"test",Snackbar.LENGTH_SHORT);
         }
     }
 

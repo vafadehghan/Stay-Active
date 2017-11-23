@@ -39,8 +39,8 @@
         android:layout_below="@id/detailMapFragment"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:fontFamily="gothamlight"
         android:gravity="center"
+        android:fontFamily="gothamlight"
         tools:targetApi="jelly_bean" />
 
 
@@ -51,9 +51,8 @@
         android:layout_below="@id/descTV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:fontFamily="gothamlight"
         android:gravity="center"
-        tools:targetApi="jelly_bean" />
+        android:fontFamily="gothamlight"/>
 
 
     <TextView
@@ -64,8 +63,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:autoLink="phone"
-        android:fontFamily="gothamlight"
-        tools:targetApi="jelly_bean" />
+        android:fontFamily="gothamlight"/>
 
 
     <TextView
@@ -76,9 +74,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:autoLink="web"
-        android:fontFamily="gothamlight"
         android:gravity="center"
-        tools:targetApi="jelly_bean" />
+        android:fontFamily="gothamlight"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/callFab"
