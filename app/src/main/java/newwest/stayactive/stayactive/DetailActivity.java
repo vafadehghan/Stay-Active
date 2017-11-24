@@ -174,6 +174,8 @@ public class DetailActivity extends AppCompatActivity {
         commCenterHours.setTypeface(book);
         commCenterPhone.setTypeface(book);
         commCenterWebsite.setTypeface(book);
+
+
         new getDetail().execute();
 
     }
