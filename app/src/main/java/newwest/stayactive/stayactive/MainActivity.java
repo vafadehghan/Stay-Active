@@ -105,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            Snackbar.make(mainListView,"test",Snackbar.LENGTH_SHORT);
         }
     }
 

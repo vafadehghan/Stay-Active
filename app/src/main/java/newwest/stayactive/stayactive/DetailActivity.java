@@ -1,17 +1,16 @@
 package newwest.stayactive.stayactive;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -38,7 +37,9 @@ public class DetailActivity extends AppCompatActivity {
     Intent extra;
     String hours;
     String desc;
+    String pc;
     String phone;
+    String location;
     String site;
     ProgressBar progressBar;
     FloatingActionButton fab;
@@ -71,6 +72,12 @@ public class DetailActivity extends AppCompatActivity {
                                             break;
                                         case "Phone":
                                             phone = jsReader.nextString();
+                                            break;
+                                        case "PC":
+                                            pc = jsReader.nextString();
+                                            break;
+                                        case "Location":
+                                            location = jsReader.nextString();
                                             break;
                                         case "Website":
                                             site = jsReader.nextString();
@@ -108,7 +115,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
             commCenterName.setText(extra.getStringExtra("Name"));
-            commCenterDesc.setText(desc);
+            commCenterDesc.setText(desc + " \n\n " + location + "\n" + pc);
             commCenterHours.setText(hours);
             commCenterPhone.setText(phone);
             commCenterWebsite.setText(site);
@@ -148,18 +155,26 @@ public class DetailActivity extends AppCompatActivity {
 
 
         extra = getIntent();
-        fab = (FloatingActionButton) findViewById(R.id.callFab);
+        fab = findViewById(R.id.callFab);
+        Typeface bold = Typeface.createFromAsset(getAssets(), "fonts/gotham_bold.otf");
+        Typeface medium = Typeface.createFromAsset(getAssets(), "fonts/gotham_medium.otf");
+        Typeface book = Typeface.createFromAsset(getAssets(), "fonts/gotham_book.otf");
+        Typeface light = Typeface.createFromAsset(getAssets(), "fonts/gotham_light.otf");
+
+
         commCenterName = findViewById(R.id.commCenterName);
         commCenterDesc = findViewById(R.id.descTV);
         commCenterPhone = findViewById(R.id.phoneTV);
         commCenterWebsite = findViewById(R.id.websiteTV);
         commCenterHours = findViewById(R.id.hoursTV);
+        commCenterPhone.setLinkTextColor(getResources().getColor(R.color.listBlue));
+        commCenterWebsite.setLinkTextColor(getResources().getColor(R.color.listBlue));
+        commCenterName.setTypeface(bold);
+        commCenterDesc.setTypeface(book);
+        commCenterHours.setTypeface(book);
+        commCenterPhone.setTypeface(book);
+        commCenterWebsite.setTypeface(book);
         new getDetail().execute();
-//        commCenterDesc.setText(extra.getStringExtra("Description"));
-//        commCenterPhone.setText(extra.getStringExtra("Phone"));
-//        commCenterWebsite.setText(extra.getStringExtra("Website"));
-//        commCenterHours.setText(extra.getStringExtra("Hours"));
-
 
     }
 }

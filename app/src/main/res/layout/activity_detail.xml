@@ -19,9 +19,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:fontFamily="@font/gotham_book"
+        android:fontFamily="@font/gotham_bold"
         android:gravity="center"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        tools:targetApi="jelly_bean" />
 
     <fragment
         android:id="@+id/detailMapFragment"
@@ -39,7 +40,7 @@
         android:layout_below="@id/detailMapFragment"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:fontFamily="gothamlight"
+        android:fontFamily="@font/gothamlight"
         android:gravity="center"
         tools:targetApi="jelly_bean" />
 
@@ -51,7 +52,7 @@
         android:layout_below="@id/descTV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:fontFamily="gothamlight"
+        android:fontFamily="@font/gothamlight"
         android:gravity="center"
         tools:targetApi="jelly_bean" />
 
@@ -64,7 +65,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:autoLink="phone"
-        android:fontFamily="gothamlight"
+        android:fontFamily="@font/gothamlight"
         tools:targetApi="jelly_bean" />
 
 
@@ -76,7 +77,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:autoLink="web"
-        android:fontFamily="gothamlight"
+        android:fontFamily="@font/gothamlight"
         android:gravity="center"
         tools:targetApi="jelly_bean" />
 
