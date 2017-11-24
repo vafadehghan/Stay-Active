@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
                     googleMap.setMinZoomPreference(12.0f);
 //                    googleMap.setMaxZoomPreference(13.0f);
 
-                    Toast.makeText(MainActivity.this, "Map Ready", Toast.LENGTH_SHORT).show();
                 }
             });
 

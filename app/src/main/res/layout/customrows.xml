@@ -6,5 +6,5 @@
     android:layout_width="fill_parent"
     android:textSize="15sp"
     android:gravity="center"
-    android:fontFamily="@font/gotham_medium"
+    android:fontFamily="@font/gothamlight"
     tools:targetApi="jelly_bean" />

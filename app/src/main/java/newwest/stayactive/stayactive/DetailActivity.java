@@ -128,8 +128,8 @@ public class DetailActivity extends AppCompatActivity {
 
 
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(y, x)));
-                    googleMap.setMinZoomPreference(10.0f);
-                    googleMap.setMaxZoomPreference(15.0f);
+                    googleMap.setMinZoomPreference(12.0f);
+
                 }
             });
             progressBar.setVisibility(View.GONE);
