@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -32,7 +33,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView commCenterName;
     TextView commCenterDesc;
     TextView commCenterPhone;
-    TextView commCenterWebsite;
+    //    TextView commCenterWebsite;
     TextView commCenterHours;
     Intent extra;
     String hours;
@@ -43,6 +44,7 @@ public class DetailActivity extends AppCompatActivity {
     String site;
     ProgressBar progressBar;
     FloatingActionButton fab;
+    Button commCenterWebsiteBtn;
 
     private class getDetail extends AsyncTask<Void, Void, Void> {
 
@@ -118,7 +120,15 @@ public class DetailActivity extends AppCompatActivity {
             commCenterDesc.setText(desc + " \n\n " + location + "\n" + pc);
             commCenterHours.setText(hours);
             commCenterPhone.setText(phone);
-            commCenterWebsite.setText(site);
+//            commCenterWebsite.setText(site);
+            commCenterWebsiteBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Uri uri = Uri.parse(site);
+                    Intent i = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(i);
+                }
+            });
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -128,7 +138,6 @@ public class DetailActivity extends AppCompatActivity {
             });
             SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.detailMapFragment);
             mapFragment.getMapAsync(new OnMapReadyCallback() {
-                @Override
                 public void onMapReady(GoogleMap googleMap) {
                     googleMap.addMarker(new MarkerOptions().position(new LatLng(y, x))
                             .title(extra.getStringExtra("Name")));
@@ -165,15 +174,17 @@ public class DetailActivity extends AppCompatActivity {
         commCenterName = findViewById(R.id.commCenterName);
         commCenterDesc = findViewById(R.id.descTV);
         commCenterPhone = findViewById(R.id.phoneTV);
-        commCenterWebsite = findViewById(R.id.websiteTV);
+//        commCenterWebsite = findViewById(R.id.websiteTV);
+        commCenterWebsiteBtn = (Button) findViewById(R.id.websiteButton);
         commCenterHours = findViewById(R.id.hoursTV);
         commCenterPhone.setLinkTextColor(getResources().getColor(R.color.listBlue));
-        commCenterWebsite.setLinkTextColor(getResources().getColor(R.color.listBlue));
+//        commCenterWebsite.setLinkTextColor(getResources().getColor(R.color.listBlue));
+        commCenterWebsiteBtn.setTypeface(book);
         commCenterName.setTypeface(bold);
         commCenterDesc.setTypeface(book);
         commCenterHours.setTypeface(book);
         commCenterPhone.setTypeface(book);
-        commCenterWebsite.setTypeface(book);
+//        commCenterWebsite.setTypeface(book);
 
 
         new getDetail().execute();

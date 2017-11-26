@@ -13,68 +13,92 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
 
-    <TextView
-        android:id="@+id/commCenterName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:textSize="25sp"
-        tools:targetApi="jelly_bean" />
-
-    <fragment
-        android:id="@+id/detailMapFragment"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@id/commCenterName">
+        android:layout_height="wrap_content">
 
-    </fragment>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/descTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/detailMapFragment"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        tools:targetApi="jelly_bean" />
+            <TextView
+                android:id="@+id/commCenterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                tools:targetApi="jelly_bean" />
 
+            <fragment
+                android:id="@+id/detailMapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/commCenterName">
 
-    <TextView
-        android:id="@+id/hoursTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/descTV"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        tools:targetApi="jelly_bean" />
-
-
-    <TextView
-        android:id="@+id/phoneTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/hoursTV"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:autoLink="phone"
-        tools:targetApi="jelly_bean" />
+            </fragment>
 
 
-    <TextView
-        android:id="@+id/websiteTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/phoneTV"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:autoLink="web"
-        android:gravity="center"
-        tools:targetApi="jelly_bean" />
+            <TextView
+                android:id="@+id/descTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailMapFragment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                tools:targetApi="jelly_bean" />
+
+
+            <TextView
+                android:id="@+id/hoursTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descTV"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                tools:targetApi="jelly_bean" />
+
+
+            <TextView
+                android:id="@+id/phoneTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hoursTV"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:autoLink="phone"
+                tools:targetApi="jelly_bean" />
+
+
+            <Button
+                android:id="@+id/websiteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneTV"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/listBlue"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/visit_the_website" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/websiteTV"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/phoneTV"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:autoLink="web"-->
+            <!--android:gravity="center"-->
+            <!--tools:targetApi="jelly_bean" />-->
+        </RelativeLayout>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/callFab"

@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getApplication(), R.layout.customrows, commCenterNames);
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(MainActivity.this, R.layout.customrows, commCenterNames);
             mainListView.setAdapter(arrayAdapter);
             mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
