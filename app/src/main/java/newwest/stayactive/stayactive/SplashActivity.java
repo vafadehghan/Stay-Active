@@ -11,7 +11,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SystemClock.sleep(500);
+        SystemClock.sleep(250);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();

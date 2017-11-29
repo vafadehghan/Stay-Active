@@ -23,6 +23,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Double> commCenterY = new ArrayList<>();
     JsonReader jsReader;
     ListView mainListView;
+    URL endpoint;
+    HttpURLConnection myConn;
 
     private class getNames extends AsyncTask<String, Void, Void> {
 
@@ -42,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
 //            mainListView.setBackgroundColor(getResources().getColor(R.color.listBlue));
 
             try {
+//                endpoint = new URL("http://opendata.newwestcity.ca/downloads/community-programming/PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING.json");
+//                myConn = (HttpURLConnection) endpoint.openConnection();
+//                myConn.setRequestMethod("GET");
+
                 InputStream is = getResources().openRawResource(R.raw.community);
+//                InputStream is = myConn.getInputStream();
                 InputStreamReader responseBodyReader = new InputStreamReader(is, "UTF-8");
                 jsReader = new JsonReader(responseBodyReader);
                 jsReader.beginArray();
