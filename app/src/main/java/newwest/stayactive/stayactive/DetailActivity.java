@@ -1,5 +1,6 @@
 package newwest.stayactive.stayactive;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -23,6 +25,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -33,7 +37,6 @@ public class DetailActivity extends AppCompatActivity {
     TextView commCenterName;
     TextView commCenterDesc;
     TextView commCenterPhone;
-    //    TextView commCenterWebsite;
     TextView commCenterHours;
     Intent extra;
     String hours;
@@ -45,6 +48,8 @@ public class DetailActivity extends AppCompatActivity {
     ProgressBar progressBar;
     FloatingActionButton fab;
     Button commCenterWebsiteBtn;
+    URL endpoint;
+    HttpURLConnection myConn;
 
     private class getDetail extends AsyncTask<Void, Void, Void> {
 
@@ -52,7 +57,12 @@ public class DetailActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
-                InputStream is = getResources().openRawResource(R.raw.community);
+                endpoint = new URL("http://opendata.newwestcity.ca/downloads/community-programming/PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING.json");
+                myConn = (HttpURLConnection) endpoint.openConnection();
+                myConn.setRequestMethod("GET");
+
+//                InputStream is = getResources().openRawResource(R.raw.community);
+                InputStream is = myConn.getInputStream();
                 InputStreamReader responseBodyReader = new InputStreamReader(is, "UTF-8");
                 jsReader = new JsonReader(responseBodyReader);
                 jsReader.beginArray();
@@ -129,13 +139,23 @@ public class DetailActivity extends AppCompatActivity {
                     startActivity(i);
                 }
             });
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone));
-                    startActivity(i);
-                }
-            });
+            try {
+
+                fab.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phone));
+                        try {
+                            startActivity(i);
+                        } catch (ActivityNotFoundException e) {
+                            Toast.makeText(DetailActivity.this, "Calling not supported", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            } catch (Exception e) {
+                Toast.makeText(DetailActivity.this, "Calling not supported", Toast.LENGTH_SHORT).show();
+            }
+
             SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.detailMapFragment);
             mapFragment.getMapAsync(new OnMapReadyCallback() {
                 public void onMapReady(GoogleMap googleMap) {
@@ -174,17 +194,14 @@ public class DetailActivity extends AppCompatActivity {
         commCenterName = findViewById(R.id.commCenterName);
         commCenterDesc = findViewById(R.id.descTV);
         commCenterPhone = findViewById(R.id.phoneTV);
-//        commCenterWebsite = findViewById(R.id.websiteTV);
-        commCenterWebsiteBtn = (Button) findViewById(R.id.websiteButton);
+        commCenterWebsiteBtn = findViewById(R.id.websiteButton);
         commCenterHours = findViewById(R.id.hoursTV);
         commCenterPhone.setLinkTextColor(getResources().getColor(R.color.listBlue));
-//        commCenterWebsite.setLinkTextColor(getResources().getColor(R.color.listBlue));
         commCenterWebsiteBtn.setTypeface(book);
         commCenterName.setTypeface(bold);
         commCenterDesc.setTypeface(book);
         commCenterHours.setTypeface(book);
         commCenterPhone.setTypeface(book);
-//        commCenterWebsite.setTypeface(book);
 
 
         new getDetail().execute();

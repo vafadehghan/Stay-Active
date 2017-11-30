@@ -46,12 +46,12 @@ public class MainActivity extends AppCompatActivity {
 //            mainListView.setBackgroundColor(getResources().getColor(R.color.listBlue));
 
             try {
-//                endpoint = new URL("http://opendata.newwestcity.ca/downloads/community-programming/PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING.json");
-//                myConn = (HttpURLConnection) endpoint.openConnection();
-//                myConn.setRequestMethod("GET");
+                endpoint = new URL("http://opendata.newwestcity.ca/downloads/community-programming/PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING.json");
+                myConn = (HttpURLConnection) endpoint.openConnection();
+                myConn.setRequestMethod("GET");
 
-                InputStream is = getResources().openRawResource(R.raw.community);
-//                InputStream is = myConn.getInputStream();
+//                InputStream is = getResources().openRawResource(R.raw.community);
+                InputStream is = myConn.getInputStream();
                 InputStreamReader responseBodyReader = new InputStreamReader(is, "UTF-8");
                 jsReader = new JsonReader(responseBodyReader);
                 jsReader.beginArray();
@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
 
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(49.21556332422588, -122.9436168718548)));
                     googleMap.setMinZoomPreference(12.0f);
-//                    googleMap.setMaxZoomPreference(13.0f);
 
                 }
             });
