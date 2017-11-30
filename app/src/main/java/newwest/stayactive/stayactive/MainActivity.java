@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     ListView mainListView;
     URL endpoint;
     HttpURLConnection myConn;
+    ProgressBar progressBar;
 
     private class getNames extends AsyncTask<String, Void, Void> {
 
@@ -113,7 +115,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+            progressBar.setVisibility(View.GONE);
         }
+
     }
 
 
@@ -121,7 +125,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        progressBar = findViewById(R.id.progressMain);
+        progressBar.setMax(10);
+        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setProgress(0);
         new getNames().execute();
 
 

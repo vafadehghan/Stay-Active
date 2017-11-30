@@ -57,6 +57,8 @@ public class DetailActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
+
+
                 endpoint = new URL("http://opendata.newwestcity.ca/downloads/community-programming/PARKS_RECREATION_AND_COMMUNITY_SCHOOL_PROGRAMMING.json");
                 myConn = (HttpURLConnection) endpoint.openConnection();
                 myConn.setRequestMethod("GET");
@@ -130,7 +132,6 @@ public class DetailActivity extends AppCompatActivity {
             commCenterDesc.setText(desc + " \n\n " + location + "\n" + pc);
             commCenterHours.setText(hours);
             commCenterPhone.setText(phone);
-//            commCenterWebsite.setText(site);
             commCenterWebsiteBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -194,15 +195,14 @@ public class DetailActivity extends AppCompatActivity {
         commCenterName = findViewById(R.id.commCenterName);
         commCenterDesc = findViewById(R.id.descTV);
         commCenterPhone = findViewById(R.id.phoneTV);
-        commCenterWebsiteBtn = findViewById(R.id.websiteButton);
         commCenterHours = findViewById(R.id.hoursTV);
         commCenterPhone.setLinkTextColor(getResources().getColor(R.color.listBlue));
-        commCenterWebsiteBtn.setTypeface(book);
         commCenterName.setTypeface(bold);
         commCenterDesc.setTypeface(book);
         commCenterHours.setTypeface(book);
         commCenterPhone.setTypeface(book);
-
+        commCenterWebsiteBtn = findViewById(R.id.websiteButton);
+        commCenterWebsiteBtn.setTypeface(book);
 
         new getDetail().execute();
 
